@@ -10,6 +10,8 @@ namespace WpfAppTemplate
 {
     /// <summary>
     /// Interaction logic for App.xaml
+    /// 
+    /// TODO: add theme support for windows!
     /// </summary>
     public partial class App : Application
     {
