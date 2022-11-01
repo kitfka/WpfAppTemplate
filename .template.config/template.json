@@ -25,6 +25,9 @@
         {
           "condition": "(!includecore)",
           "exclude": [ "WpfAppTemplate.Core/**/*" ]
+        },
+        {
+          "exclude": [ ".git/**/*", ".vs/**/*" ]
         }
       ]
     }
