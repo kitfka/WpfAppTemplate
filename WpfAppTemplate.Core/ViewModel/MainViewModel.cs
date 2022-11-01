@@ -15,10 +15,10 @@ public class MainViewModel : ViewModelBase
 {
     public INavigationService NavigationService { get; set; }
 
+    public string BindingText { get; set; } = "Hello World!";
 
     public MainViewModel(INavigationService navigation)
     {
         NavigationService = navigation;
     }
-
 }

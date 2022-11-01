@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfAppTemplate.Core.Model;
 using WpfAppTemplate.Core.Model.Interfaces;
+using WpfAppTemplate.ViewModel;
 
 namespace WpfAppTemplate.View;
 
@@ -22,11 +23,16 @@ namespace WpfAppTemplate.View;
 /// </summary>
 public partial class MainWindow : Window, IMyWindow
 {
-    public MainWindow()
+    private MainViewModel MainViewModel;
+    public MainWindow(MainViewModel viewModel)
     {
         InitializeComponent();
 
         Closing += MainWindow_Closing;
+
+
+        DataContext = viewModel;
+        MainViewModel = viewModel;
     }
 
     private void MainWindow_Closing(object? sender, System.ComponentModel.CancelEventArgs e)
