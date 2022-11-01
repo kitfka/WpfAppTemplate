@@ -25,3 +25,6 @@ It might be something like:
 
 Run:
 `dotnet new -u WPF-FEY`
+
+If your projectname contains a space for example "Another Test" redo the project reference from Another Test to Another Test.Core!
+<ProjectReference Include="..\Another Test.Core\Another Test.Core.csproj" />
