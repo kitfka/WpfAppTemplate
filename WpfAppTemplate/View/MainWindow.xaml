@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Label Content="{Binding BindingText, FallbackValue='Fallback value for the editor!'}"/>
+        <StackPanel Orientation="Vertical">
+            <Label Content="{Binding BindingText, FallbackValue='Fallback value for the editor!'}"/>
+            <Button x:Name="TestButton" Content="Durp" Click="TestButton_Click" />
+        </StackPanel>
     </Grid>
 </Window>

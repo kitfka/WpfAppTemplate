@@ -43,4 +43,9 @@ public partial class MainWindow : Window, IMyWindow
 
         Application.Current.Shutdown();
     }
+
+    private void TestButton_Click(object sender, RoutedEventArgs e)
+    {
+        MainViewModel.NavigationService.Confirm(MainViewModel.IncreaseCounter, "Test Message! \nIncrease the counter?");
+    }
 }

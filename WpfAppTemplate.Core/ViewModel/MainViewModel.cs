@@ -14,11 +14,29 @@ namespace WpfAppTemplate.ViewModel;
 public class MainViewModel : ViewModelBase
 {
     public INavigationService NavigationService { get; set; }
+    
+    private int Counter = 0;
 
-    public string BindingText { get; set; } = "Hello World!";
+    private string bindingText = "Hello World!";
+
+    public string BindingText
+    {
+        get { return bindingText; }
+        set { 
+            bindingText = value;
+            NotifyPropertyChanged();
+        }
+    }
+
 
     public MainViewModel(INavigationService navigation)
     {
         NavigationService = navigation;
+    }
+
+    public void IncreaseCounter()
+    {
+        Counter++;
+        BindingText = $"Counter: {Counter}";
     }
 }
