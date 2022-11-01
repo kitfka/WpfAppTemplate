@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Kitfka",
+  "classifications": [ "WPF" ],
+  "name": "My WPF template",
+  "identity": "Kitfka.WPF.CSharp",
+  "groupIdentity": "Kitfka.WPF",
+  "shortName": "WPF-FEY",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "WpfAppTemplate",
+  "preferNameDirectory": true,
+  "symbols": {
+    "includecore": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true"
+    }
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "condition": "(!includecore)",
+          "exclude": [ "WpfAppTemplate.Core/**/*" ]
+        }
+      ]
+    }
+  ]
+}
