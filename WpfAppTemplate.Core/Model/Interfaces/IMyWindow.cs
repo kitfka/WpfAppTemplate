@@ -1,8 +1,10 @@
-﻿namespace WpfAppTemplate.Core.Model.Interfaces
+﻿namespace WpfAppTemplate.Core.Model.Interfaces;
+
+/// <summary>
+/// Use this for every View. Or else you won't be allowed to use it with the <seealso cref="INavigationService"/>.
+/// </summary>
+public interface IMyWindow
 {
-    public interface IMyWindow
-    {
-        bool? ShowDialog();
-        void Show();
-    }
+    bool? ShowDialog();
+    void Show();
 }

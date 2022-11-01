@@ -21,17 +21,14 @@ public static class XmlHelper
     }
 
     // https://stackoverflow.com/questions/1138414/can-i-serialize-xml-straight-to-a-string-instead-of-a-stream-with-c
-    public static string ToXmlString<T>(this T input, bool EmptyNamespace = true)
+    public static string ToXmlString<T>(this T input)
     {
-        using (StringWriter writer = new StringWriter())
-        {
-            input.ToXml(writer);
-            return writer.ToString();
-        }
+        using StringWriter writer = new();
+        input.ToXml(writer);
+        return writer.ToString();
     }
     public static void ToXml<T>(this T objectToSerialize,
-                                Stream stream,
-                                bool EmptyNamespace = false)
+                                Stream stream)
     {
         new XmlSerializer(typeof(T)).Serialize(stream, objectToSerialize);
     }
@@ -42,7 +39,7 @@ public static class XmlHelper
     {
         if (EmptyNamespace)
         {
-            XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
+            XmlSerializerNamespaces ns = new();
             ns.Add("", "");
             new XmlSerializer(typeof(T)).Serialize(writer, objectToSerialize, ns);
         }
