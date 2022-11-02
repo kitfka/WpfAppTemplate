@@ -25,7 +25,7 @@ public partial class ConfirmWindow : Window, IMyWindow
 
     private Action? Action = null;
     Timer? myTimer;
-    private Dispatcher _uiDispatcher;
+    private readonly Dispatcher _uiDispatcher;
 
 
     private bool CloseOnEnter = false;
@@ -45,13 +45,6 @@ public partial class ConfirmWindow : Window, IMyWindow
     }
 
 
-
-    // Call from the main thread
-    public void UseThisThreadForEvents()
-    {
-
-    }
-
     public void Init(Action? action, string message, ConfirmWindowOptions options = 0)
     {
         Action = action;
@@ -63,6 +56,33 @@ public partial class ConfirmWindow : Window, IMyWindow
             Button_No.Content = "Ok";
             Button_Yes.IsEnabled = false;
             Button_Yes.Visibility = Visibility.Collapsed;
+        }
+
+        if (options.HasFlag(ConfirmWindowOptions.Fullscreen))
+        {
+
+            WindowStyle = WindowStyle.None; // this will do nothing XD this is the default value!
+            WindowState = WindowState.Maximized;
+
+            Message.FontSize = 50;
+        }
+
+        if (options.HasFlag(ConfirmWindowOptions.CloseOnEnter))
+        {
+            CloseOnEnter = true;
+        }
+
+        if (options.HasFlag(ConfirmWindowOptions.SelfDestruct1s))
+        {
+            myTimer = new();
+
+            // Tell the timer what to do when it elapses
+            myTimer.Elapsed += ReadTimeout;
+            myTimer.AutoReset = false;
+            myTimer.Interval = 1000;
+            myTimer.Enabled = true;
+
+            myTimer.Start();
         }
     }
 
@@ -98,7 +118,7 @@ public partial class ConfirmWindow : Window, IMyWindow
     {
         switch (e.Key)
         {
-            case Key.Space:
+            case Key.Enter:
                 if (CloseOnEnter)
                 {
                     _uiDispatcher.BeginInvoke(new Action(() =>

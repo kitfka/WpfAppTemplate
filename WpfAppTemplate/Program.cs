@@ -19,7 +19,7 @@ namespace WpfAppTemplate;
 // https://docs.simpleinjector.org/en/latest/wpfintegration.html
 static class Program
 {
-    static Mutex mutex = new(true, "{E1ABB30F-B977-4865-AAA0-0911089F8B79}");
+    static readonly Mutex mutex = new(true, "{E1ABB30F-B977-4865-AAA0-0911089F8B79}");
 
     [STAThread]
     static void Main()
@@ -60,6 +60,7 @@ static class Program
         return container;
     }
 
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "Is not a problem in Release mode!")]
     private static void RegisterUnhandledException()
     {
         AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
@@ -139,7 +140,7 @@ static class Program
 
     private static void CreateMiniDump()
     {
-        using FileStream fs = new FileStream($"{Core.Model.Config.Pragmas.FolderPath}/UnhandledDump {DateTime.Now:yyyy-MM-dd HHmmss}.dmp", FileMode.Create);
+        using FileStream fs = new($"{Core.Model.Config.Pragmas.FolderPath}/UnhandledDump {DateTime.Now:yyyy-MM-dd HHmmss}.dmp", FileMode.Create);
         using System.Diagnostics.Process process = System.Diagnostics.Process.GetCurrentProcess();
         MiniDumpWriteDump(process.Handle,
                           process.Id,
