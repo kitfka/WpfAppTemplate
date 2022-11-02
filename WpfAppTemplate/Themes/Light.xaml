@@ -15,5 +15,11 @@
     <Thickness x:Key="WindowBorderSize">4</Thickness>
     <Thickness x:Key="WindowBorderSizeMaximized">4</Thickness>
 
+    <SolidColorBrush x:Key="TextColorBrush" Color="{DynamicResource TextColor}"/>
+    <SolidColorBrush x:Key="ButtonColorBrush" Color="{DynamicResource ButtonColor}"/>
+    <SolidColorBrush x:Key="BackgroundColorBrush" Color="{DynamicResource BackgroundColor}" />
+    <SolidColorBrush x:Key="ToolBarBackgroundColorBrush" Color="{DynamicResource ToolBarBackgroundColor}" />
+    <SolidColorBrush x:Key="HighlightColorBrush" Color="{DynamicResource HighlightColor}" />
+    
     <sys:Int32 x:Key="FonSize1"></sys:Int32>
 </ResourceDictionary>
