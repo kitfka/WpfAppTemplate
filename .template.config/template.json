@@ -18,8 +18,14 @@
       "datatype": "bool",
       "description": "This is needed for my mvvm sutup. This contains the Models and ViewModels that are plateform independent!",
       "defaultValue": "true"
+    },
+    "include_TUI": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "A Text ui example. It makes use of Terminal.Gui. There is no real reason to use this.",
+      "defaultValue": "false"
     }
-    //"Framework": {
+    //"Framework": { WpfAppTemplate.TUI
     //  "type": "parameter",
     //  "description": "The target framework for the project.",
     //  "datatype": "choice",
@@ -45,6 +51,10 @@
         {
           "condition": "(!includecore)",
           "exclude": [ "WpfAppTemplate.Core/**/*" ]
+        },
+        {
+          "condition": "(!include_TUI)",
+          "exclude": [ "WpfAppTemplate.TUI/**/*" ]
         },
         {
           "exclude": [ ".git/**/*", ".vs/**/*" ]
