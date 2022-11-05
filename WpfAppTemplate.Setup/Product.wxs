@@ -6,8 +6,7 @@
            Language="!(loc.Language)"
            Version="$(var.BuildVersion)"
            Manufacturer="!(loc.Company)"
-           UpgradeCode="2E19C644-89D7-4ECF-B0C3-5137F6CA4844">
-           <!--UpgradeCode="PUT-GUID-HERE">-->
+           UpgradeCode="PUT-GUID-HERE">
 
 		<Package InstallerVersion="200"
              Compressed="yes"
