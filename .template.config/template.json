@@ -31,25 +31,6 @@
       "description": "A decent installer.",
       "defaultValue": "false"
     }
-    //"Framework": { WpfAppTemplate.TUI
-    //  "type": "parameter",
-    //  "description": "The target framework for the project.",
-    //  "datatype": "choice",
-    //  "choices": [
-    //    {
-    //      "choice": "net6.0",
-    //      "description": "Target net6.0"
-    //    }
-    //  ],
-    //  "replaces": "FrameworkParameter",
-    //  "defaultValue": "net6.0"
-    //},
-    //"Nullable": {
-    //  "type": "parameter",
-    //  "datatype": "bool",
-    //  "defaultValue": "true",
-    //  "description": "Whether to enable nullable reference types for this project."
-    //}
   },
   "sources": [
     {
