@@ -24,6 +24,12 @@
       "datatype": "bool",
       "description": "A Text ui example. It makes use of Terminal.Gui. There is no real reason to use this.",
       "defaultValue": "false"
+    },
+    "include_installer": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "A decent installer.",
+      "defaultValue": "false"
     }
     //"Framework": { WpfAppTemplate.TUI
     //  "type": "parameter",
@@ -55,6 +61,10 @@
         {
           "condition": "(!include_TUI)",
           "exclude": [ "WpfAppTemplate.TUI/**/*" ]
+        },
+        {
+          "condition": "(!include_installer)",
+          "exclude": [ "WpfAppTemplate.Setup/**/*" ]
         },
         {
           "exclude": [ ".git/**/*", ".vs/**/*" ]

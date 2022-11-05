@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+	<Product Id="*"
+           Name="!(loc.ProductName_$(var.Platform))"
+           Language="!(loc.Language)"
+           Version="$(var.BuildVersion)"
+           Manufacturer="!(loc.Company)"
+           UpgradeCode="2E19C644-89D7-4ECF-B0C3-5137F6CA4844">
+           <!--UpgradeCode="PUT-GUID-HERE">-->
+
+		<Package InstallerVersion="200"
+             Compressed="yes"
+             InstallScope="perMachine"
+             Platform="$(var.Platform)"
+             Manufacturer="!(loc.Company)"
+             Description="!(loc.Description)"
+             Keywords="!(loc.Keywords)"
+             Comments="!(loc.Comments)"
+             Languages="!(loc.Language)"
+             />
+
+		<MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeErrorMessage)" />
+
+		<MediaTemplate
+      EmbedCab="yes"
+      />
+
+		<Icon Id="icon.ico" SourceFile="$(var.WpfAppTemplate.ProjectDir)\Assets\Icon.ico" />
+
+		<!-- Use the icon.ico icon from WpfAppTemplate -->
+		<Property Id="ARPPRODUCTICON">icon.ico</Property>
+
+		<!-- Help/Support link -->
+		<Property Id="ARPURLINFOABOUT">http://example.com/</Property>
+
+		<!-- Create a basic UI for the installer -->
+		<UIRef Id="WixUI_Minimal" />
+
+		<!-- Change the installer UI Background images-->
+		<WixVariable Id="WixUILicenseRtf" Value="$(var.ProjectDir)\Assets\License.rtf" />
+		<WixVariable Id="WixUIDialogBmp" Value="$(var.ProjectDir)\Assets\Background.bmp" />
+		<WixVariable Id="WixUIBannerBmp" Value="$(var.ProjectDir)\Assets\Banner.bmp" />
+
+
+
+
+		<Feature Id="ProductFeature" Title="WpfAppTemplate.Setup" Level="1">
+
+			<ComponentGroupRef Id="ProductComponents" />
+			<ComponentGroupRef Id="PublishedComponents" />
+
+		</Feature>
+	</Product>
+
+
+</Wix>

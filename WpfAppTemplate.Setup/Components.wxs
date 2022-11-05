@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+	<Fragment>
+		<ComponentGroup Id="ProductComponents">
+
+			<!-- Shortcut -->
+			<ComponentRef Id="MainAppShortcut" />
+
+		</ComponentGroup>
+
+		<DirectoryRef Id="INSTALLFOLDER" FileSource="..\build-$(var.Platform)\">
+			<Component Id="MainAppShortcut" Guid="{32B71E72-E7E3-4ACB-AF47-C3B57531EF51}">
+				<Shortcut Id="MainAppShortcut"
+						  Name="!(loc.ProductName_$(var.Platform))"
+						  Target="[INSTALLFOLDER]WpfAppTemplate.exe"
+						  Directory="InstallProgramMenuFolder"
+						  WorkingDirectory="INSTALLFOLDER"
+						  Icon="icon.ico"
+                  />
+				<!-- Loophole to get a key for the component/shortcut -->
+				<RegistryValue Id="RegShortcutKey" Root="HKCU" Key="SOFTWARE\!(loc.ProductFolderName)" Name="Shortcut" Value="1" Type="integer" KeyPath="yes" />
+
+				<!--Remove start menu items-->
+				<RemoveFolder Id="RemoveStartMenu" Directory="InstallProgramMenuFolder" On="uninstall" />
+			</Component>
+		</DirectoryRef>
+
+	</Fragment>
+
+</Wix>

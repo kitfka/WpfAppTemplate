@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WixLocalization Culture="en-us" xmlns="http://schemas.microsoft.com/wix/2006/localization">
+  <String Id="ProductName_x86">WpfAppTemplate (32bit)</String>
+  <String Id="ProductName_x64">WpfAppTemplate (64bit)</String>
+  
+  <String Id="ProductFolderName">WpfAppTemplate</String>
+
+  <String Id="Language">1033</String>
+  <String Id="Company">Company inc.</String>
+  <String Id="Description">Software description</String>
+  <String Id="Keywords">WpfAppTemplate</String>
+  <String Id="Comments">Software comments</String>
+  <String Id="DowngradeErrorMessage">A newer version of WpfAppTemplate is already installed.</String>
+  
+  
+</WixLocalization>

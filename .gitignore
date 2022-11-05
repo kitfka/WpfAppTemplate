@@ -361,3 +361,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# WpfAppTemplate
+/build-*
+/WpfAppTemplate.Setup/Installs/*
