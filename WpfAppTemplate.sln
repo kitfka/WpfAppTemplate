@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfAppTemplate.TUI", "WpfAp
 EndProject
 Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "WpfAppTemplate.Setup", "WpfAppTemplate.Setup\WpfAppTemplate.Setup.wixproj", "{73D6C98F-C7C2-4A0F-9DDD-0B3855A8F154}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppTemplate.Maui", "WpfAppTemplate.Maui\WpfAppTemplate.Maui.csproj", "{7AD83895-D6E0-4586-B0CE-B4D963E41858}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,6 +70,24 @@ Global
 		{73D6C98F-C7C2-4A0F-9DDD-0B3855A8F154}.Release|x64.Build.0 = Release|x64
 		{73D6C98F-C7C2-4A0F-9DDD-0B3855A8F154}.Release|x86.ActiveCfg = Release|x86
 		{73D6C98F-C7C2-4A0F-9DDD-0B3855A8F154}.Release|x86.Build.0 = Release|x86
+		{7AD83895-D6E0-4586-B0CE-B4D963E41858}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AD83895-D6E0-4586-B0CE-B4D963E41858}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AD83895-D6E0-4586-B0CE-B4D963E41858}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7AD83895-D6E0-4586-B0CE-B4D963E41858}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7AD83895-D6E0-4586-B0CE-B4D963E41858}.Debug|x64.Build.0 = Debug|Any CPU
+		{7AD83895-D6E0-4586-B0CE-B4D963E41858}.Debug|x64.Deploy.0 = Debug|Any CPU
+		{7AD83895-D6E0-4586-B0CE-B4D963E41858}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7AD83895-D6E0-4586-B0CE-B4D963E41858}.Debug|x86.Build.0 = Debug|Any CPU
+		{7AD83895-D6E0-4586-B0CE-B4D963E41858}.Debug|x86.Deploy.0 = Debug|Any CPU
+		{7AD83895-D6E0-4586-B0CE-B4D963E41858}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AD83895-D6E0-4586-B0CE-B4D963E41858}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AD83895-D6E0-4586-B0CE-B4D963E41858}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{7AD83895-D6E0-4586-B0CE-B4D963E41858}.Release|x64.ActiveCfg = Release|Any CPU
+		{7AD83895-D6E0-4586-B0CE-B4D963E41858}.Release|x64.Build.0 = Release|Any CPU
+		{7AD83895-D6E0-4586-B0CE-B4D963E41858}.Release|x64.Deploy.0 = Release|Any CPU
+		{7AD83895-D6E0-4586-B0CE-B4D963E41858}.Release|x86.ActiveCfg = Release|Any CPU
+		{7AD83895-D6E0-4586-B0CE-B4D963E41858}.Release|x86.Build.0 = Release|Any CPU
+		{7AD83895-D6E0-4586-B0CE-B4D963E41858}.Release|x86.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
