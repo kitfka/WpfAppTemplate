@@ -1,10 +1,9 @@
 ﻿using WpfAppTemplate.ViewModel;
 
-namespace WpfAppTemplate.Maui;
+namespace WpfAppTemplate.Maui.Views;
 
 public partial class MainPage : ContentPage
 {
-    int count = 0;
     MainViewModel viewModel => BindingContext as MainViewModel;
 
     public MainPage(MainViewModel viewModel)

@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local.core="clr-namespace:WpfAppTemplate.ViewModel;assembly=WpfAppTemplate.Core"
              x:DataType="local.core:MainViewModel"
-             x:Class="WpfAppTemplate.Maui.MainPage">
+             x:Class="WpfAppTemplate.Maui.Views.MainPage">
 
     <ScrollView>
         <VerticalStackLayout
