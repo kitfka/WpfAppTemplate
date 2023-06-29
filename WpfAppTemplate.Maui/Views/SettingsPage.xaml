@@ -3,11 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WpfAppTemplate.Maui.Views.SettingsPage"
              Title="SettingsPage">
+
+    <Shell.NavBarIsVisible>
+        <x:Boolean>True</x:Boolean>
+    </Shell.NavBarIsVisible>
+    
              <!--x:DataType="local.core:MainViewModel"-->
     <VerticalStackLayout>
         <Label 
             Text="Settings page!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Orientation="Horizontal">
+            <Switch OnColor="{DynamicResource Primary}" />
+            <Label VerticalOptions="Center" Text="Hey" />
+        </StackLayout>
     </VerticalStackLayout>
 </ContentPage>
