@@ -1,8 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local.core="clr-namespace:WpfAppTemplate.ViewModel;assembly=WpfAppTemplate.Core"
              x:Class="WpfAppTemplate.Maui.MainPage">
 
+    <!--FIXME: This will run twice... find a way to use this for design only!-->
+    <ContentPage.BindingContext>
+        <local.core:MainViewModel />
+    </ContentPage.BindingContext>
+    
     <ScrollView>
         <VerticalStackLayout
             Spacing="25"
@@ -30,7 +36,7 @@
 
             <Button
                 x:Name="CounterBtn"
-                Text="Click me"
+                Text="{Binding BindingText, FallbackValue='Fallback value for the editor!'}"
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Center" />

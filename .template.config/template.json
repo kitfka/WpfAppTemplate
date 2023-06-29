@@ -31,6 +31,12 @@
       "datatype": "bool",
       "description": "A decent installer.",
       "defaultValue": "false"
+    },
+    "maui": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "Add .net maui support.",
+      "defaultValue": "false"
     }
   },
   "sources": [
@@ -47,6 +53,10 @@
         {
           "condition": "(!installer)",
           "exclude": [ "WpfAppTemplate.Setup/**/*" ]
+        },
+        {
+          "condition": "(!maui)",
+          "exclude": [ "WpfAppTemplate.Maui/**/*" ]
         },
         {
           "exclude": [ ".git/**/*", ".vs/**/*" ]
