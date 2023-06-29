@@ -2,13 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local.core="clr-namespace:WpfAppTemplate.ViewModel;assembly=WpfAppTemplate.Core"
+             x:DataType="local.core:MainViewModel"
              x:Class="WpfAppTemplate.Maui.MainPage">
 
-    <!--FIXME: fix this... find a way to use this for design only!-->
-    <!--<ContentPage.BindingContext>
-        <local.core:MainViewModel />
-    </ContentPage.BindingContext>-->
-    
     <ScrollView>
         <VerticalStackLayout
             Spacing="25"
