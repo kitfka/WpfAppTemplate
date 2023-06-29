@@ -5,14 +5,12 @@ namespace WpfAppTemplate.Maui;
 public partial class MainPage : ContentPage
 {
     int count = 0;
-    private MainViewModel viewModel;
+    MainViewModel viewModel => BindingContext as MainViewModel;
 
-    public MainPage()
+    public MainPage(MainViewModel viewModel)
     {
-        InitializeComponent();
-        viewModel = new MainViewModel(null);
-
         BindingContext = viewModel;
+        InitializeComponent();
     }
 
     private void OnCounterClicked(object sender, EventArgs e)

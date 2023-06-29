@@ -28,8 +28,6 @@ public class MainViewModel : ViewModelBase
         }
     }
 
-    public MainViewModel() { bindingText = "HAHAHAHA"; }
-
     public MainViewModel(INavigationService navigation)
     {
         NavigationService = navigation;

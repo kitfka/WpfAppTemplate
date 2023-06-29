@@ -4,10 +4,10 @@
              xmlns:local.core="clr-namespace:WpfAppTemplate.ViewModel;assembly=WpfAppTemplate.Core"
              x:Class="WpfAppTemplate.Maui.MainPage">
 
-    <!--FIXME: This will run twice... find a way to use this for design only!-->
-    <ContentPage.BindingContext>
+    <!--FIXME: fix this... find a way to use this for design only!-->
+    <!--<ContentPage.BindingContext>
         <local.core:MainViewModel />
-    </ContentPage.BindingContext>
+    </ContentPage.BindingContext>-->
     
     <ScrollView>
         <VerticalStackLayout
