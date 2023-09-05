@@ -37,13 +37,13 @@ public partial class Config
     /// The default Settings.xml content. 
     /// The weird Doctype root thing is needed to enable the GetElementById call we use for reading and writing settings.
     /// </summary>
-    public static readonly string DefaultXML = "<?XML version=\"1.0\"?> \n" +
+    public static readonly string DefaultXML = "<?xml version=\"1.0\"?> \n" +
             "<!DOCTYPE root [ \n" +
             "  <!ELEMENT root ANY>   \n" +
             "  <!ELEMENT Setting ANY>  \n" +
             "  <!ATTLIST Setting Key ID #REQUIRED>]>  \n" +
             "<root>\n" +
-            " 	<Setting Key=\"DefaultFilePath\">c:\\afys3g</Setting> \n" +
+            " 	<Setting Key=\"DefaultFilePath\">c:\\temp</Setting> \n" +
             "</root>";
 
 
@@ -74,7 +74,7 @@ public partial class Config
 
         try { doc.Load(FilePath); }
         catch (FileNotFoundException)
-        {
+        { 
             doc.LoadXml(DefaultXML);
             doc.Save(FilePath);
         }

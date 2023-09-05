@@ -48,6 +48,7 @@ public static class MauiProgram
 
         // Oke, other services.
         builder.Services.AddSingleton<INavigationService, FakeNavigationService>(); // change FakeNavigationService when proper version is implemented!
+        builder.Services.AddTransient<Core.Model.Config.Config>();
 
         return builder;
     }
